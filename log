@@ -1,0 +1,215 @@
+~ # wget 192.168.3.103:8080/8192cu.ko
+Connecting to 192.168.3.103:8080 (192.168.3.103:8080)
+8192cu.ko            100% |**********************************************************************************************************************|   801k  0:00:00 ETA
+~ # chmod +x 8192cu.ko 
+~ # insmod 8192cu.ko 
+~ # lsmod
+Module                  Size  Used by    Tainted: P  
+8192cu                666925  0 
+bcmdhd                575408  0 
+btusb                  64594  0 
+wl                   2802193  0 
+tfat                  204411  0 
+tntfs                 525259  0 
+bcm_dbus               58507  1 wl
+mali_kbase            187636 11 
+ump                    37663 23 mali_kbase
+umplock                 8790 22 
+mhal_alsa_audio        35423  0 
+mdrv_alsa_audio        16224  1 mhal_alsa_audio
+snd_pcm_oss            37712  0 
+snd_pcm                78403  2 mdrv_alsa_audio,snd_pcm_oss
+snd_timer              19357  1 snd_pcm
+snd_rawmidi            19831  0 
+snd_page_alloc          4723  1 snd_pcm
+snd_mixer_oss          14535  1 snd_pcm_oss
+snd_hwdep               6078  0 
+utpa2k               7815329  0 
+
+
+
+
+
+[ 4393.161683] RTL871X: module init start
+[ 4393.161713] RTL871X: rtl8192cu v4.0.5_11249.20140422
+[ 4393.161724] RTL871X: build time: Mar 18 2018 23:29:16
+[ 4393.162784] usbcore: registered new interface driver rtl8192cu
+[ 4393.162810] RTL871X: module init ret=0
+[ 4437.127808] rpc uptime 73 minutes
+[ 4456.469531] utmi off
+[ 4456.595618] ==20150728==> hub_port_init 1 #0
+[ 4456.595633] Plug in USB Port4
+[ 4456.595641] utmi on
+[ 4456.731682] usb 4-1: new high-speed USB device number 2 using Mstar-ehci-4
+[ 4456.731953] utmi on
+[ 4456.917033] usb 4-1: New USB device found, idVendor=0b05, idProduct=17ba
+[ 4456.917049] usb 4-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[ 4456.917057] usb 4-1: Product: 802.11n WLAN Adapter
+[ 4456.917065] usb 4-1: Manufacturer: Realtek
+[ 4456.917072] usb 4-1: SerialNumber: 00e04c000001
+[ 4456.924876] RTL871X: 
+usb_endpoint_descriptor(0):
+[ 4456.924899] RTL871X: bLength=7
+[ 4456.924904] RTL871X: bDescriptorType=5
+[ 4456.924908] RTL871X: bEndpointAddress=81
+[ 4456.924913] RTL871X: wMaxPacketSize=200
+[ 4456.924917] RTL871X: bInterval=0
+[ 4456.924923] RTL871X: RT_usb_endpoint_is_bulk_in = 1
+[ 4456.924928] RTL871X: 
+usb_endpoint_descriptor(1):
+[ 4456.924934] RTL871X: bLength=7
+[ 4456.924939] RTL871X: bDescriptorType=5
+[ 4456.924943] RTL871X: bEndpointAddress=2
+[ 4456.924947] RTL871X: wMaxPacketSize=200
+[ 4456.924952] RTL871X: bInterval=0
+[ 4456.924956] RTL871X: RT_usb_endpoint_is_bulk_out = 2
+[ 4456.924961] RTL871X: 
+usb_endpoint_descriptor(2):
+[ 4456.924967] RTL871X: bLength=7
+[ 4456.924971] RTL871X: bDescriptorType=5
+[ 4456.924976] RTL871X: bEndpointAddress=3
+[ 4456.924980] RTL871X: wMaxPacketSize=200
+[ 4456.924984] RTL871X: bInterval=0
+[ 4456.924989] RTL871X: RT_usb_endpoint_is_bulk_out = 3
+[ 4456.924994] RTL871X: 
+usb_endpoint_descriptor(3):
+[ 4456.925000] RTL871X: bLength=7
+[ 4456.925004] RTL871X: bDescriptorType=5
+[ 4456.925008] RTL871X: bEndpointAddress=84
+[ 4456.925013] RTL871X: wMaxPacketSize=40
+[ 4456.925017] RTL871X: bInterval=1
+[ 4456.925022] RTL871X: RT_usb_endpoint_is_int_in = 4, Interval = 1
+[ 4456.925028] RTL871X: nr_endpoint=4, in_num=2, out_num=2
+
+[ 4456.925034] RTL871X: USB_SPEED_HIGH
+[ 4456.925089] RTL871X: CHIP TYPE: RTL8188C_8192C
+[ 4456.925142] RTL871X: register rtw_netdev_ops to netdev_ops
+[ 4456.925361] RTL871X: Chip Version ID: VERSION_NORMAL_TSMC_CHIP_88C.
+[ 4456.925380] RTL871X: RF_Type is 3!!
+[ 4456.925682] RTL871X: EEPROM type is E-FUSE
+[ 4456.925723] RTL871X: ====> ReadAdapterInfo8192C
+[ 4456.925883] RTL871X: Boot from EFUSE, Autoload OK !
+[ 4457.006153] RTL871X: EEPROMVID = 0x0b05
+[ 4457.006377] RTL871X: EEPROMPID = 0x17ba
+[ 4457.006386] RTL871X: EEPROMCustomerID : 0x00
+[ 4457.006391] RTL871X: EEPROMSubCustomerID: 0x00
+[ 4457.006396] RTL871X: RT_CustomerID: 0x00
+[ 4457.006406] RTL871X: _ReadMACAddress MAC Address from EFUSE = f8:32:e4:b2:a2:ee
+[ 4457.006413] RTL871X: EEPROMRegulatory = 0x3
+[ 4457.006418] RTL871X: _ReadBoardType(0)
+[ 4457.006424] RTL871X: BT Coexistance = disable
+[ 4457.006430] RTL871X: mlmepriv.ChannelPlan = 0x02
+[ 4457.006439] RTL871X: _ReadPSSetting...bHWPwrPindetect(0)-bHWPowerdown(0) ,bSupportRemoteWakeup(0)
+[ 4457.006444] RTL871X: ### PS params=>  power_mgnt(1),usbss_enable(0) ###
+[ 4457.006449] RTL871X: ### AntDivCfg(0)
+[ 4457.006454] RTL871X: readAdapterInfo_8192CU(): REPLACEMENT = 1
+[ 4457.006461] RTL871X: <==== ReadAdapterInfo8192C in 80 ms
+[ 4457.007832] RTL871X: rtw_macaddr_cfg MAC Address  = f8:32:e4:b2:a2:ee
+[ 4457.007855] RTL871X: bDriverStopped:1, bSurpriseRemoved:0, bup:0, hw_init_completed:0
+[ 4457.007936] RTL871X: rtw_ndev_init(wlan1)
+[ 4457.008096] CFG80211-ERROR) wl_cfg80211_netdev_notifier_call : wl_cfg80211_netdev_notifier_call : wdev= dev->ieee80211_ptr_is_NULL 
+[ 4457.046196] CFG80211-ERROR) wl_cfg80211_netdev_notifier_call : wl_cfg80211_netdev_notifier_call : wdev= dev->ieee80211_ptr_is_NULL 
+[ 4457.046377] RTL871X: _rtw_drv_register_netdev, MAC Address (if1) = f8:32:e4:b2:a2:ee
+[ 4457.058736] CFG80211-ERROR) wl_cfg80211_netdev_notifier_call : wl_cfg80211_netdev_notifier_call : wdev= dev->ieee80211_ptr_is_NULL 
+[ 4457.058774] RTL871X: +871x_drv - drv_open, bup=0
+[ 4457.064252] RTL871X:  ===> FirmwareDownload91C() fw:Rtl819XFwImageArray_TSMC
+[ 4457.064282] RTL871X: FirmwareDownload92C accquire FW from embedded image
+[ 4457.064291] RTL871X: fw_ver=v88, fw_subver=2, sig=0x88c0
+[ 4457.088989] RTL871X: FirmwareDownload92C writeFW_retry:0, time after fwdl_start_time:24ms
+[ 4457.092212] RTL871X: fw download ok!
+[ 4457.092237] RTL871X: Set RF Chip ID to RF_6052 and RF type to 1T1R.
+[ 4457.439014] RTL871X: IQK:Start!!!
+[ 4457.444791] RTL871X: Path A IQK Success!!
+[ 4457.449176] RTL871X: Path A IQK Success!!
+[ 4457.453155] RTL871X: IQK: final_candidate is 0
+[ 4457.453173] RTL871X: IQK: RegE94=104 RegE9C=16 RegEA4=fd RegEAC=3fd RegEB4=0 RegEBC=0 RegEC4=0 RegECC=0
+[ 4457.453180] RTL871X: Path A IQ Calibration Success !
+[ 4457.454737] RTL871X: IQK: process time 16 ms
+[ 4457.559746] RTL871X: LCK: process time 108 ms
+[ 4457.561806] RTL871X: pdmpriv->TxPowerTrackControl = 1
+[ 4457.563894] RTL871X: rtl8192cu_hal_init in 508ms
+[ 4457.573927] RTL871X: MAC Address = f8:32:e4:b2:a2:ee
+[ 4457.574803] RTL871X: -871x_drv - drv_open, bup=1
+[ 4457.574983] IPv6: ADDRCONF(NETDEV_UP): wlan1: link is not ready
+[ 4457.575005] CFG80211-ERROR) wl_cfg80211_netdev_notifier_call : wl_cfg80211_netdev_notifier_call : wdev= dev->ieee80211_ptr_is_NULL 
+[ 4457.575065] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[ 4457.575092] RTL871X: set_mode = IW_MODE_INFRA
+[ 4457.576113] RTL871X: =>rtw_wx_set_essid
+[ 4457.576144] RTL871X: ssid=g\xffffffc6isQ\xffffffffJ\xffffffec)\xffffffcd\xffffffba\xffffffab\xfffffff2\xfffffffb\xffffffe3F|\xffffffc2T\xfffffff8\xffffffe8\xffffffe7\xffffff8dvZ.c3\xffffff9f\xffffffc9\xffffff9a`.\xffffff91 \xffffffb4S\xffffff8b, len=32
+[ 4457.576162] RTL871X: Set SSID under fw_state=0x00000008
+[ 4457.576186] RTL871X: <=rtw_wx_set_essid, ret 0
+[ 4457.578483] RTL871X: hw_var_set_opmode()-4260 mode = 2
+[ 4457.632255] RTL871X: [rtw_wx_set_pmkid] IW_PMKSA_FLUSH!
+[ 4458.886423] RTL871X: survey done event(d) band:0 for wlan1
+[ 4458.886457] RTL871X: rtw_select_and_join_from_scanned_queue: return _FAIL(candidate == NULL)
+[ 4458.886465] RTL871X: try_to_join, but select scanning queue fail, to_roam:0
+[ 4458.888328] RTL871X: rtw_indicate_scan_done(wlan1)
+[ 4458.890534] RTL871X: rtl8192c_set_FwJoinBssReport_cmd mstatus(0)
+[ 4463.966424] RTL871X: survey done event(a) band:0 for wlan1
+[ 4463.966452] RTL871X: rtw_indicate_scan_done(wlan1)
+[ 4465.589707] RTL871X: ==>rtw_ps_processor .fw_state(8)
+[ 4465.589722] RTL871X: ==>ips_enter cnts:1
+[ 4465.589727] RTL871X: ===> rtw_ips_pwr_down...................
+[ 4465.589733] RTL871X: ====> rtw_ips_dev_unload...
+[ 4465.613207] RTL871X: usb_read_port_cancel
+[ 4465.613389] RTL871X: usb_read_port_complete()-1291: RX Warning! bDriverStopped(0) OR bSurpriseRemoved(0) bReadPortCancel(1)
+[ 4465.614172] RTL871X: usb_read_port_complete()-1291: RX Warning! bDriverStopped(0) OR bSurpriseRemoved(0) bReadPortCancel(1)
+[ 4465.614338] RTL871X: usb_read_port_complete()-1291: RX Warning! bDriverStopped(0) OR bSurpriseRemoved(0) bReadPortCancel(1)
+[ 4465.614644] RTL871X: usb_read_port_complete()-1291: RX Warning! bDriverStopped(0) OR bSurpriseRemoved(0) bReadPortCancel(1)
+[ 4465.614686] RTL871X: usb_write_port_cancel 
+[ 4465.614786] RTL871X: ==> rtl8192cu_hal_deinit 
+[ 4465.614793] RTL871X: bkeepfwalive(0)
+[ 4465.614798] RTL871X: card disble without HWSM...........
+[ 4465.621571] RTL871X: <=== rtw_ips_pwr_down..................... in 32ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~ # ifconfig
+eth0      Link encap:Ethernet  HWaddr 38:8C:50:17:A4:CB  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:201 Base address:0x4000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:1360 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1360 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:247648 (241.8 KiB)  TX bytes:247648 (241.8 KiB)
+
+wlan0     Link encap:Ethernet  HWaddr A0:6F:AA:E9:DA:27  
+          inet addr:192.168.3.101  Bcast:192.168.3.255  Mask:255.255.255.0
+          inet6 addr: fe80::a26f:aaff:fee9:da27/64 Scope:Link
+          inet6 addr: fdd2:5f2:2416:0:a26f:aaff:fee9:da27/64 Scope:Global
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1535 errors:0 dropped:1800 overruns:0 frame:18634
+          TX packets:1540 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:969310 (946.5 KiB)  TX bytes:377080 (368.2 KiB)
+
+wlan1     Link encap:Ethernet  HWaddr F8:32:E4:B2:A2:EE  
+          UP BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+~ # 
+
