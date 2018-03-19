@@ -167,15 +167,6 @@ usb_endpoint_descriptor(3):
 
 
 
-
-
-
-
-
-
-
-
-
 ~ # ifconfig
 eth0      Link encap:Ethernet  HWaddr 38:8C:50:17:A4:CB  
           UP BROADCAST MULTICAST  MTU:1500  Metric:1
@@ -211,5 +202,50 @@ wlan1     Link encap:Ethernet  HWaddr F8:32:E4:B2:A2:EE
           collisions:0 txqueuelen:1000 
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 
+
+
+~ # connmanctl technologies
+/net/connman/technology/wifi
+  Name = WiFi
+  Type = wifi
+  Powered = True
+  Connected = True
+  Tethering = False
+  Interfaces = [ wlan1, wlan0 ]
+  CountryCode = GB 11
+  P2P = False
+  P2PListen = False
+  P2PPersistent = False
+  P2PIdentifier = [LG] webOS TV LH590V
+  WFD = False
+  WFDDevType = 0
+  WFDSessionAvail = False
+  WFDCPSupport = False
+  WFDRtspPort = 0
+  MultiChannelSchedMode = 0
+  WOWL = False
+  DiagnosticInfo = 
+GET_CS_INFO
+		Version : wl0: May 31 2016 12:56:16 version 6.37.115.35 (r608829)
+		Ccode : GB
+		CcodeRev : 11
+		Channel : 5
+		MCS : 15
+		MIMO : SDM
+		Rate : auto mbps
+		RSSI : -44 dBm
+		Noise : -91 dBm
+		Txpwr : 127 qdBm
+		NSS : 2 
+		BW : 20 Mhz
+
+/net/connman/technology/ethernet
+  Name = Wired
+  Type = ethernet
+  Powered = True
+  Connected = False
+  Tethering = False
+  Interfaces = [ eth0 ]
 ~ # 
+
 
